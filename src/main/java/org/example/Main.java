@@ -22,18 +22,18 @@ class Persona {
     int edad;
     String genero;
 
-    // Constructor vacío
+    // Constructor vacio
     public Persona() {
     }
 
-    // Constructor con parámetros
+    // Constructor con parametros
     public Persona(String nombre, int edad, String genero) {
         this.nombre = nombre;
         this.edad = edad;
         this.genero = genero;
     }
 
-    // Métodos getter y setter
+    // Metodos getter y setter
     public String getNombre() {
         return nombre;
     }
@@ -58,7 +58,7 @@ class Persona {
         this.genero = genero;
     }
 
-    // Método para mostrar información
+    // Metodo para mostrar información
     static void mostrarInformacion(Persona p) {
         System.out.println("Nombre: " + p.getNombre());
         System.out.println("Edad: " + p.getEdad());
