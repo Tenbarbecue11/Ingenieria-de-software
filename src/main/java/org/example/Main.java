@@ -1,17 +1,67 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Persona persona1 = new Persona();
+        persona1.setNombre("Juan");
+        persona1.setEdad(25);
+        persona1.setGenero("Masculino");
+
+        Persona persona2 = new Persona("Maria", 30, "Femenino");
+
+        Persona.mostrarInformacion(persona1);
+        System.out.println("-----------");
+        Persona.mostrarInformacion(persona2);
+    }
+}
+
+class Persona {
+    // Atributos
+    String nombre;
+    int edad;
+    String genero;
+
+    // Constructor vacío
+    public Persona() {
+    }
+
+    // Constructor con parámetros
+    public Persona(String nombre, int edad, String genero) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.genero = genero;
+    }
+
+    // Métodos getter y setter
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    // Método para mostrar información
+    static void mostrarInformacion(Persona p) {
+        System.out.println("Nombre: " + p.getNombre());
+        System.out.println("Edad: " + p.getEdad());
+        System.out.println("Genero: " + p.getGenero());
     }
 }
